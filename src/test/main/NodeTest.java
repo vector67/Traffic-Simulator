@@ -165,15 +165,13 @@ public class NodeTest {
     }
 
     /**
-     * Documents a known bug: hasCollisionPoints() returns collisionpoints.isEmpty()
-     * instead of !collisionpoints.isEmpty(). So on a fresh node with no collision
-     * points, it incorrectly returns true.
+     * Bug: hasCollisionPoints() returns collisionpoints.isEmpty() instead of
+     * !collisionpoints.isEmpty(). A node with no collision points should return
+     * false, but currently returns true.
      */
     @Test
-    public void testHasCollisionPoints_bugInvertedLogic() {
+    public void testHasCollisionPoints_emptyNode_returnsFalse() {
         Node n = new Node(0.0, 0.0, 1);
-        // Bug: should be false (no collision points), but returns true
-        assertTrue(n.hasCollisionPoints(),
-            "Known bug: hasCollisionPoints() returns isEmpty() instead of !isEmpty()");
+        assertFalse(n.hasCollisionPoints());
     }
 }
