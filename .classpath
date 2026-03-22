@@ -14,5 +14,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JAMA"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ejml"/>
+	<classpathentry kind="src" path="src/test"/>
+	<classpathentry kind="lib" path="lib/junit-platform-console-standalone-1.10.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
