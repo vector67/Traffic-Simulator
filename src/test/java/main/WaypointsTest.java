@@ -5,9 +5,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class WaypointsTest {
 
-    // Resolve test map relative to the project root (working directory when running tests)
+    // Resolve test map via classpath (Gradle copies src/test/resources to build/resources/test)
     private static final String TEST_MAP =
-        "src/test/resources/test_map.txt";
+        WaypointsTest.class.getClassLoader().getResource("test_map.txt").getFile();
 
     // --- Empty Waypoints ---
 

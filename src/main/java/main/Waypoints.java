@@ -1,15 +1,11 @@
 package main;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
-import java.io.DataInputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -162,7 +158,7 @@ public class Waypoints implements Map<Integer, Node>, Iterable {
 		return nodes.entrySet().iterator();
 	}
 	public boolean contains(Object arg0) {
-		return (arg0.getClass()==new Integer(0).getClass())?nodes.containsKey(arg0):nodes.containsValue(arg0);
+		return (arg0.getClass()==Integer.valueOf(0).getClass())?nodes.containsKey(arg0):nodes.containsValue(arg0);
 	}
 
 

@@ -3,7 +3,6 @@ package main;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import com.sun.xml.internal.ws.util.StringUtils;
 
 public class Node {
 	public double x,y,dist;
